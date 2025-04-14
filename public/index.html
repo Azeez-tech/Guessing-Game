@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Live Guessing Game</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <div id="lobby" class="hidden">
+        <h2>Lobby</h2>
+        <p>Players Connected: <span id="playerCount">0</span></p>
+        <ul id="playerList"></ul>
+        <div id="masterControls" class="hidden">
+          <input type="text" id="question" placeholder="Enter question" />
+          <input type="text" id="answer" placeholder="Enter answer" />
+          <button id="startGame">Start Game</button>
+        </div>
+      </div>
+
+      <div id="game" class="hidden">
+        <h2>Guess the Answer</h2>
+        <p id="gameQuestion"></p>
+        <input type="text" id="guessInput" placeholder="Enter your guess" />
+        <button id="submitGuess">Submit Guess</button>
+        <p>Attempts left: <span id="attemptsLeft">3</span></p>
+        <p id="timer">Time left: 60s</p>
+      </div>
+
+      <div id="chat">
+        <h2>Game Chat</h2>
+        <ul id="messages"></ul>
+        <input
+          id="chatInput"
+          autocomplete="off"
+          placeholder="Type a message..."
+        />
+        <button id="sendChat">Send</button>
+      </div>
+
+      <div id="scoreboard">
+        <h2>Scoreboard</h2>
+        <ul id="scoreList"></ul>
+      </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/script.js"></script>
+  </body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Live Guessing Game</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <div id="lobby" class="hidden">
+        <h2>Lobby</h2>
+        <p>Players Connected: <span id="playerCount">0</span></p>
+        <ul id="playerList"></ul>
+        <div id="masterControls" class="hidden">
+          <input type="text" id="question" placeholder="Enter question" />
+          <input type="text" id="answer" placeholder="Enter answer" />
+          <button id="startGame">Start Game</button>
+        </div>
+      </div>
+
+      <div id="game" class="hidden">
+        <h2>Guess the Answer</h2>
+        <p id="gameQuestion"></p>
+        <input type="text" id="guessInput" placeholder="Enter your guess" />
+        <button id="submitGuess">Submit Guess</button>
+        <p>Attempts left: <span id="attemptsLeft">3</span></p>
+        <p id="timer">Time left: 60s</p>
+      </div>
+
+      <div id="chat">
+        <h2>Game Chat</h2>
+        <ul id="messages"></ul>
+        <input
+          id="chatInput"
+          autocomplete="off"
+          placeholder="Type a message..."
+        />
+        <button id="sendChat">Send</button>
+      </div>
+
+      <div id="scoreboard">
+        <h2>Scoreboard</h2>
+        <ul id="scoreList"></ul>
+      </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/script.js"></script>
+  </body>
+</html>
